@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComputerFix - Jasa Servis Komputer Profesional</title>
+    <title>KomputerQU</title>
     
-    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
     
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="nav-brand">
-                <!-- <i data-feather="monitor"></i> -->
-                <span>Computer<strong>Fix</strong></span>
+            <div class="nav-brand" id="navBrand">
+                <span>Komputer<strong>QU</strong></span>
             </div>
             
             <div class="nav-menu" id="navMenu">
-                <a href="#home">Beranda</a>
-                <a href="#services">Layanan</a>
-                <a href="#about">Tentang</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#contact">Kontak</a>
+                <a href="#home" class="nav-link">Beranda</a>
+                <a href="#services" class="nav-link">Layanan</a>
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Kontak</a>
             </div>
             
             <div class="nav-extra">
@@ -33,15 +29,14 @@
                     <i data-feather="sun" id="themeIcon"></i>
                 </button>
                 <button class="hamburger" id="hamburger">
-                    <i data-feather="menu"></i>
+                    <i data-feather="menu" id="hamburgerIcon"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
+    <section id="home" class="hero" style="background-image: url('img/umberto-jXd2FSvcRr8-unsplash.jpg');">
+        <div class="hero-overlay"></div> <div class="container">
             <div class="hero-content">
                 <h1>Solusi Terpercaya untuk <span>Servis Komputer</span> Anda</h1>
                 <p>Service profesional komputer, laptop, dan PC dengan teknisi berpengalaman. Garansi terjamin!</p>
@@ -53,7 +48,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
             <div class="section-header">
@@ -74,6 +68,7 @@
                         <li><i data-feather="check"></i> Install Aplikasi</li>
                         <li><i data-feather="check"></i> Troubleshooting</li>
                     </ul>
+                    <button class="btn-service" onclick="openServiceModal('komputer')">Pesan Layanan</button>
                 </div>
 
                 <div class="service-card">
@@ -88,21 +83,8 @@
                         <li><i data-feather="check"></i> Cleaning Service</li>
                         <li><i data-feather="check"></i> Thermal Paste</li>
                     </ul>
+                    <button class="btn-service" onclick="openServiceModal('upgrade')">Pesan Layanan</button>
                 </div>
-
-                <!-- <div class="service-card">
-                    <div class="service-icon">
-                        <i data-feather="hard-drive"></i>
-                    </div>
-                    <h3>Data Recovery</h3>
-                    <p>Pemulihan data yang hilang atau terhapus dari hardisk/SSD</p>
-                    <ul>
-                        <li><i data-feather="check"></i> Recovery Data</li>
-                        <li><i data-feather="check"></i> Backup Data</li>
-                        <li><i data-feather="check"></i> Repair Hardisk</li>
-                        <li><i data-feather="check"></i> Clone System</li>
-                    </ul>
-                </div> -->
 
                 <div class="service-card">
                     <div class="service-icon">
@@ -116,12 +98,12 @@
                         <li><i data-feather="check"></i> Setting Router</li>
                         <li><i data-feather="check"></i> CCTV Install</li>
                     </ul>
+                    <button class="btn-service" onclick="openServiceModal('jaringan')">Pesan Layanan</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
@@ -165,7 +147,6 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-header">
@@ -176,7 +157,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="istockphoto-1314343964-612x612.jpg" alt="Gaming PC Setup">
+                        <img src="img/istockphoto-1314343964-612x612.jpg" alt="Gaming PC Setup">
                     </div>
                     <h3>Gaming PC Setup</h3>
                     <p>Rakit PC gaming abis high-end dengan RTX 5080</p>
@@ -184,7 +165,7 @@
 
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="serverinstalasi.jpg" alt="Server Installation">
+                        <img src="img/serverinstalasi.jpg" alt="Server Installation">
                     </div>
                     <h3>Server Installation</h3>
                     <p>Setup server untuk kantor dan gedung tinggi</p>
@@ -192,7 +173,7 @@
 
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="network.jpg" alt="Network Setup">
+                        <img src="img/network.jpg" alt="Network Setup">
                     </div>
                     <h3>Network Setup</h3>
                     <p>Instalasi jaringan LAN untuk warnet, sekolah, dan kantor</p>
@@ -200,7 +181,7 @@
 
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="cctv.jpg" alt="CCTV System">
+                        <img src="img/cctv.jpg" alt="CCTV System">
                     </div>
                     <h3>CCTV System</h3>
                     <p>Pemasangan 160 unit CCTV HD untuk toko, sekolah, dan kantor</p>
@@ -209,7 +190,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -250,32 +230,69 @@
                         <i data-feather="clock"></i>
                     </div>
                     <h3>Jam Operasional</h3>
-                    <p>Senin - minggu: 00.00 - 00.00</p>
+                    <p>Senin - Minggu: 00.00 - 00.00</p>
                     <p>Tutup Kalau Mood saja</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <!-- <i data-feather="monitor"></i> -->
-                    <span>Computer<strong>Fix</strong></span>
+                    <span>Komputer<strong>QU</strong></span>
                 </div>
-                <p>&copy; 2025 ComputerFix. All Rights Reserved.</p>
+                <p>&copy; 2025 KomputerQU. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeServiceModal()">&times;</span>
+            <h2 id="modalTitle">Pesan Layanan</h2>
+            <p id="modalDescription" class="modal-desc"></p>
+            <form id="serviceForm" class="service-form">
+                <input type="hidden" id="serviceType" name="serviceType">
+                
+                <div class="form-group">
+                    <label for="customerName">Nama Lengkap</label>
+                    <input type="text" id="customerName" name="customerName" required placeholder="Masukkan nama Anda">
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerEmail">Email</label>
+                    <input type="email" id="customerEmail" name="customerEmail" required placeholder="contoh@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerPhone">No. Telepon</label>
+                    <input type="tel" id="customerPhone" name="customerPhone" required placeholder="08123456789">
+                </div>
+                
+                <div class="form-group">
+                    <label for="serviceDetail">Detail Kerusakan / Kebutuhan</label>
+                    <textarea id="serviceDetail" name="serviceDetail" rows="4" required placeholder="Jelaskan masalah atau kebutuhan Anda"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="serviceDate">Tanggal Service</label>
+                    <input type="date" id="serviceDate" name="serviceDate" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">
+                    <i data-feather="send"></i>
+                    Kirim Pesanan
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
     <script>
         feather.replace();
     </script>
-    <script src="script.js"></script>
+
 </body>
 </html>
-
-
